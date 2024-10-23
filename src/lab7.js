@@ -1,22 +1,22 @@
-/**
- Todo: follow the todos in file to complete the lab
- - 
- */
-
 const EventEmitter = require("events");
 
-// Todo use EventEmitter
-//
+const myEmitter = new EventEmitter();
 
-// Todo: write listener 1 that logs the following, `data` and `token` are emitted
-console.log(
-  `Recieved payload ${JSON.stringify(data, null, 2)} with token: ${token}`
-);
+// Todo: Write listener 1
+myEmitter.on('dataReceived', (data, token) => {
+    console.log(`Received payload ${JSON.stringify(data, null, 2)} with token: ${token}`);
+});
 
-// Todo: write listener 2 that logs the following
-console.log("A second listener as well");
+// Todo: Write listener 2
+myEmitter.on('secondListener', () => {
+    console.log("A second listener as well");
+});
 
 setInterval(() => {
-  // Todo: write an emitter based listener 1
-  //
-}, 2000);
+    const data = { id: 1, message: "Hello, World!" };
+    const token = "123456";
+
+    myEmitter.emit('dataReceived', data, token);
+    
+    myEmitter.emit('secondListener');
+}, 10000);

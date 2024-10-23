@@ -6,9 +6,8 @@ const foo = "foo";
 const bar = "bar";
 const baz = "baz";
 
-/**
- Todo
- Using two ways of export (node default export): 
- - create an export of foo and bar
- - create an export of baz
- */
+// Named exports for foo and bar
+module.exports.baz = baz;
+
+// Default export for baz
+module.exports = { foo, bar, baz};

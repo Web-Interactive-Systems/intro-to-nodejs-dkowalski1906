@@ -5,6 +5,8 @@
  ./utils/constants.js and ./utils/helpers.js
  */
 
+const os = require("os")
+
 const _os = {
   name: os.type(),
   release: os.release(),
