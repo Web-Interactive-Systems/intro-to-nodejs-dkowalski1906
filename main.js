@@ -1,1 +1,1 @@
-require("./src/lab7.js");
+require("./src/lab8.js");
