@@ -9,3 +9,18 @@
   - console.log process
   - console.log window
  */
+
+const tab = [0, 1, 2];
+
+const lab1 = () => {
+  console.log(tab);
+  console.log("__dirname:", __dirname);
+  console.log("__filename:", __filename);
+  console.log("require:", require);
+  console.log("process", process.env);
+};
+
+// Exécution de lab1 après 3000ms
+setTimeout(() => {
+  lab1();
+}, 3000);

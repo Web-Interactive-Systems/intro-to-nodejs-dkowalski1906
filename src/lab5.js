@@ -8,3 +8,9 @@
  */
 
 const path = require("path");
+
+console.log(path);
+console.log(path.dirname("./src/text.txt"));
+console.log(path.join("toto", "labx.png"));
+console.log(path.extname(path.join("toto", "labx.png")));
+console.log(path.basename((path.join("toto", "labx.png")), ".png"));
